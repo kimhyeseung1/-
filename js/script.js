@@ -185,12 +185,11 @@ let waypoint_service = new Waypoint({
   offset : "80%"
 });
 //안내창 스크립트
-let modalWrap = document.querySelector(".modal-wrap");
-let modalClose = document.querySelector(".modal-close");
-modalClose.addEventListener("click" , function (){
-  modalWrap.classList.add("fadeOut");
-  modalWrap.addEventListener("animationed" , function (){
-    modalWrap.style.display = "none";
-  })
-})
-}
+let body = document.querySelector("body");
+let modal = document.querySelector(".modal-wrap");
+modal.addEventListener("click",function(){
+    modal.style.display = "none";
+    fadeOut(modal);
+});
+};
+
